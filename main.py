@@ -1,189 +1,142 @@
-from enum import Enum
-
+from Calidad import Calidad
 from Frase import Frase
 
 from pandas import pandas as pd
 
-
-class Calidad(Enum):
-    BUENO = 1
-    NEUTRAL = 0
-    MALO = -1
-
+from Palabra import Palabra
 
 qualityPerPalabra = []
+
+
 def llenar_palabras():
-    qualityPerPalabra.append({
-        "palabra": "bueno",
-        "calidad": Calidad.BUENO
-    })
-    qualityPerPalabra.append({
-        "palabra": "buenos",
-        "calidad": Calidad.BUENO
-    })
-    qualityPerPalabra.append({
-        "palabra": "buena",
-        "calidad": Calidad.BUENO
-    })
-    qualityPerPalabra.append({
-        "palabra": "buenas",
-        "calidad": Calidad.BUENO
-    })
-    qualityPerPalabra.append({
-        "palabra": "bonito",
-        "calidad": Calidad.BUENO
-    })
-    qualityPerPalabra.append({
-        "palabra": "bonitos",
-        "calidad": Calidad.BUENO
-    })
-    qualityPerPalabra.append({
-        "palabra": "bonita",
-        "calidad": Calidad.BUENO
-    })
-    qualityPerPalabra.append({
-        "palabra": "bonitas",
-        "calidad": Calidad.BUENO
-    })
-    qualityPerPalabra.append({
-        "palabra": "lindo",
-        "calidad": Calidad.BUENO
-    })
-    qualityPerPalabra.append({
-        "palabra": "lindos",
-        "calidad": Calidad.BUENO
-    })
-    qualityPerPalabra.append({
-        "palabra": "genial",
-        "calidad": Calidad.BUENO
-    })
-    qualityPerPalabra.append({
-        "palabra": "empanada",
-        "calidad": Calidad.BUENO
-    })
-    qualityPerPalabra.append({
-        "palabra": "bien",
-        "calidad": Calidad.NEUTRAL
-    })
-    qualityPerPalabra.append({
-        "palabra": "normal",
-        "calidad": Calidad.NEUTRAL
-    })
-    qualityPerPalabra.append({
-        "palabra": "normales",
-        "calidad": Calidad.NEUTRAL
-    })
-    qualityPerPalabra.append({
-        "palabra": "tibio",
-        "calidad": Calidad.NEUTRAL
-    })
-    qualityPerPalabra.append({
-        "palabra": "tranquilo",
-        "calidad": Calidad.NEUTRAL
-    })
-    qualityPerPalabra.append({
-        "palabra": "tranquila",
-        "calidad": Calidad.NEUTRAL
-    })
-    qualityPerPalabra.append({
-        "palabra": "refunfuñante",
-        "calidad": Calidad.MALO
-    })
-    qualityPerPalabra.append({
-        "palabra": "horrible",
-        "calidad": Calidad.MALO
-    })
-    qualityPerPalabra.append({
-        "palabra": "horribles",
-        "calidad": Calidad.MALO
-    })
-    qualityPerPalabra.append({
-        "palabra": "miedo",
-        "calidad": Calidad.MALO
-    })
-    qualityPerPalabra.append({
-        "palabra": "muerte",
-        "calidad": Calidad.MALO
-    })
-    qualityPerPalabra.append({
-        "palabra": "escapar",
-        "calidad": Calidad.MALO
-    })
-    qualityPerPalabra.append({
-        "palabra": "malo",
-        "calidad": Calidad.MALO
-    })
-    qualityPerPalabra.append({
-        "palabra": "mal",
-        "calidad": Calidad.MALO
-    })
+    qualityPerPalabra.append(Palabra("beneficiado", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("bien", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("buena", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("deliciosa", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("especialmente", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("espectacular", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("excelente", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("gane", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("genial", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("gusta", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("gusto", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("inteligente", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("juega", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("jugar", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("jugue", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("lindo", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("nobel", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("recomiendo", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("solucion", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("sorprende", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("suerte", Calidad.BUENO))
+    qualityPerPalabra.append(Palabra("super", Calidad.BUENO))
+
+    qualityPerPalabra.append(Palabra("demasiado", Calidad.NEUTRAL))
+    qualityPerPalabra.append(Palabra("gran", Calidad.NEUTRAL))
+    qualityPerPalabra.append(Palabra("mames", Calidad.NEUTRAL))
+    qualityPerPalabra.append(Palabra("mas", Calidad.NEUTRAL))
+    qualityPerPalabra.append(Palabra("merece", Calidad.NEUTRAL))
+    qualityPerPalabra.append(Palabra("melancolico", Calidad.NEUTRAL))
+    qualityPerPalabra.append(Palabra("no", Calidad.NEUTRAL))
+    qualityPerPalabra.append(Palabra("puro", Calidad.NEUTRAL))
+
+    qualityPerPalabra.append(Palabra("aburrio", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("asco", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("decepcion", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("demonio", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("depravado", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("desesperante", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("disociada", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("exponerlo", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("expuesto", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("innecesario", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("miserable", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("nunca", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("pego", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("pierden", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("problema", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("quemarlo", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("retirado", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("reclamar", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("triste", Calidad.MALO))
+    qualityPerPalabra.append(Palabra("verguenza", Calidad.MALO))
 
 
 def generar_frases():
+    """
+    Obtuvimos frases al azar de comentarios de publicaciones en twitter (X).
+    """
     qnt_palabras = len(qualityPerPalabra)
 
     return {
         1: Frase(
-            "El paisaje del atardecer era genial, con colores lindos y un ambiente tranquilo que hacía que todo pareciera bueno",
+            "ES REALMENTE ESPECTACULAR",
             qnt_palabras),
         2: Frase(
-            "Aunque la película tenía momentos normales, la actuación principal fue refunfuñante y dejó a todos con un mal sabor",
+            "a mi toco marcar a uno que hizo inferiores en river en los '90, yo le sacaba años de diferencia, "
+            "que van a ser los que me va a tocar recuperarme del baile que me pego",
             qnt_palabras),
         3: Frase(
-            "La decoración de la fiesta era bonita, con luces brillantes y detalles lindos que hacían sentir a todos bien y tranquilos",
+            "una vez jugue con un arquero del america de Mexico, ya retirado, no le pudimos meter un gol nunca, "
+            "al rato, el flaco se aburrio y pidio cambiar, se puso a jugar de 9, nos metio como 40 goles...",
             qnt_palabras),
         4: Frase(
-            "El día comenzó normal, pero se volvió horrible cuando la tormenta trajo consigo una sensación de miedo y la necesidad de escapar",
+            "Jugue con alguien q andaba en las inferiores de Ferro, es demasiado notorio cuando uno se dedica a "
+            "ser futbolista con alguien que lo juega como hobby, de suerte le gane un par de duelos",
             qnt_palabras),
         5: Frase(
-            "La charla fue buena y genial, aunque algunos comentarios neutrales no aportaron mucho, el ambiente en general fue tranquilo",
+            "ufff cuanta razon no me habia dado cuenta que genial, que inteligente se merece el nobel que gran"
+            " descubrimiento...  yo pensaba que el agua NACE en las botellas hijole que decepción ufff no mames"
+            " que increible waooo es tan científica esta publicación que no puedo hacer mas que dejar de "
+            "seguir esta pagina tan científica y sobre todooo inteligente.",
             qnt_palabras),
         6: Frase(
-            "La casa estaba decorada de manera linda, con un toque bonito en cada rincón, lo que hizo que todos se sintieran bien y acogidos",
+            "El punto es que el agua embotellada es un negocio innecesario",
             qnt_palabras),
         7: Frase(
-            "A pesar de que el clima estaba normal, el paseo por el bosque se volvió horrible al escuchar ruidos que causaban miedo y nos hicieron querer escapar",
+            "Asi es como de disociada tienen la realidad las mujeres en España especialmente la Charo que"
+            " dice no me lo creo , es desesperante no hay solucion",
             qnt_palabras),
         8: Frase(
-            "La comida en el restaurante fue genial, desde las empanadas hasta el postre, todo estaba bueno, lo que hizo que la noche fuera tranquila",
+            "El problema es que han lavado tanto el cerebro a la gente con que la izquierda es buena para el"
+            " pueblo y la derecha es el demonio que por eso les sorprende, demuestra que ni se han informado por"
+            " otras vias o leyendo el programa electoral",
             qnt_palabras),
         9: Frase(
-            "Aunque la reunión fue neutra y la mayoría de las personas estuvieron tibias, hubo algunos momentos que se sintieron refunfuñantes",
+            "Bien hecho, grabarlo en el momento, dejarlo a las autoridades, exponerlo y quemarlo toda su"
+            " miserable vida. Eso vale mas que paloterapia, con paloterapia hasta sale beneficiado,"
+            " puro depravado esta siendo expuesto",
             qnt_palabras),
         10: Frase(
-            "El viaje fue bueno al principio, pero se tornó malo cuando nos perdimos en una zona horrible y sentimos la necesidad de escapar",
+            "Muy lindo la verdad, me gusto Me gusta ese ambiente un tanto triste (???) o melancólico..."
+            " No sabría explicarlo que le dan.",
             qnt_palabras),
         11: Frase(
-            "La fiesta tuvo un ambiente genial, con música buena y una decoración bonita que hizo que todos se sintieran lindos y bien",
+            "Un asco la pizza fina como nunca y encima llamas para reclamar y la respuesta del encargado y "
+            "mismo dueño del lugar es que hay días que la pizza sale así y que a algunos clientes les gusta así!"
+            " Muy fuertee!!! Nunca más . Otro cliente que pierden porque ya conozco varios !",
             qnt_palabras),
         12: Frase(
-            "La película era normal al principio, pero se volvió horrible hacia el final, dejando una sensación de miedo en todos",
+            "Pedí pasta y estaba deliciosa super recomiendo, las personas q fueron conmigo pidieron sanguche "
+            "caliente, lasaña y Pamplona con papas y también dijeron q excelente, los precios muy bien acorde al "
+            "tamaño de las porciones. Volveremos …",
             qnt_palabras),
         13: Frase(
-            "Aunque el ambiente en la cafetería era tranquilo, el servicio fue tibio y dejó a algunos clientes refunfuñantes",
-            qnt_palabras),
-        14: Frase(
-            "La mañana comenzó buena, con un cielo lindo y un ambiente tranquilo, pero se volvió malo cuando llegó una noticia horrible",
-            qnt_palabras),
-        15: Frase(
-            "La cena fue genial, con platos buenos y bonitos que hicieron que la noche fuera tranquila y agradable para todos",
-            qnt_palabras),
-        16: Frase(
-            "bueno bueno bueno bueno bueno",
+            "no entiendo como en montevideo no hay un solo delivery de tortas fritas, somos una VERGÜENZA",
             qnt_palabras)
     }
-
 
 
 def procesar_frases(frases):
     qnt_palabras = len(qualityPerPalabra)
 
     for fraseId in frases:
-        palabras = list(frases[fraseId].frase.lower().split(" "))
+        palabras = list(frases[fraseId].frase.split(" "))
         for i in range(qnt_palabras):
-            if palabras.__contains__(qualityPerPalabra[i]['palabra']):
+            if palabras.__contains__(qualityPerPalabra[i].palabra):
                 frases[fraseId].w[i] = 1
-                match qualityPerPalabra[i]['calidad']:
+                match qualityPerPalabra[i].calidad:
                     case Calidad.BUENO:
                         frases[fraseId].s[0] += 1
                     case Calidad.NEUTRAL:
@@ -194,15 +147,19 @@ def procesar_frases(frases):
         frases[fraseId].calcular_promedio_sentimiento()
 
 
+def analizar_frases_generadas():
+    frases = generar_frases()
+    procesar_frases(frases)
+    table = pd.DataFrame({
+        "frase": [frase.frase for frase in frases.values()],
+        "calidad": [frase.calidad for frase in frases.values()],
+        "promedio_sentimiento": [frase.promedio_sentimiento for frase in frases.values()],
+    })
+    table.sort_values(by=['promedio_sentimiento'], ascending=False, inplace=True)
+    print(table)
 
 
 llenar_palabras()
 
 if __name__ == "__main__":
-    frases = generar_frases()
-    procesar_frases(frases)
-    pd.DataFrame({
-        "frase": [frase.frase for frase in frases.values()],
-        "calidad": [frase.calidad for frase in frases.values()],
-        "promedio_sentimiento": [frase.promedio_sentimiento for frase in frases.values()],
-    }).to_csv("frases.csv")
+    analizar_frases_generadas()
