@@ -1,16 +1,29 @@
 class Frase:
     qnt_palabras = 0
 
-    def __init__(self, frase, qnt_palabras):
+    def __init__(self, frase: str, qnt_palabras):
         Frase.qnt_palabras = qnt_palabras
-        self.frase = frase
+        self.frase = (frase
+                      .lower()
+                      .replace(',', '')
+                      .replace('.', '')
+                      .replace('!', '')
+                      .replace('?', '')
+                      .replace(';', '')
+                      .replace(':', '')
+                      .replace('á', 'a')
+                      .replace('é', 'e')
+                      .replace('í', 'i')
+                      .replace('ó', 'o')
+                      .replace('ú', 'u')
+                      .replace('ü', 'u')
+                      )
         self.s = [0, 0, 0]
         self.w = []
         for i in range(qnt_palabras):
             self.w.append(0)
         self.calidad = 0
         self.promedio_sentimiento = 0
-
 
     def calcular_calidad(self):
         sum_w = sum(self.w)
